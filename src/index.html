@@ -21,7 +21,13 @@
     class="min-h-screen bg-gradient-to-r from-sky-500 to-purple-500 p-4 text-slate-600"
   >
     <main class="container mx-auto min-h-screen rounded-2xl bg-white">
-      <header class="grid grid-cols-3 items-center border-b px-12 py-8">
+      <header
+        class="grid grid-cols-[50px_50px_1fr] items-center border-b p-4 sm:grid-cols-3 sm:py-8"
+      >
+        <button class="p-2 sm:hidden">
+          <i class="fa-solid fa-bars fa-lg"></i>
+        </button>
+
         <img
           src="./images/logo.png"
           alt="logo saasy"
@@ -29,7 +35,7 @@
           class="w-10"
         />
 
-        <nav class="flex items-center justify-center gap-6">
+        <nav class="hidden items-center justify-center gap-6 sm:flex">
           <a class="font-bold hover:text-sky-500" href="#">Home</a>
           <a class="font-bold hover:text-sky-500" href="#">Invoices</a>
           <a class="font-bold hover:text-sky-500" href="#">Clients</a>
@@ -49,16 +55,19 @@
       </header>
 
       <section
-        class="flex items-center justify-between border-b px-12 py-8 font-bold"
+        class="flex flex-col-reverse justify-between gap-y-6 border-b px-6 py-8 font-bold sm:flex-row sm:items-center sm:gap-y-0 sm:px-12"
       >
-        <nav class="flex">
-          <h2 class="border-r pr-3 text-slate-950">Cashflow</h2>
-          <a class="px-3 text-sky-500 hover:text-slate-600" href="#"
-            >Last 7 days</a
-          >
-          <a class="px-3 hover:text-sky-500" href="#">Last 30 days</a>
-          <a class="px-3 hover:text-sky-500" href="#">All-time</a>
-        </nav>
+        <div class="flex flex-col gap-6 sm:flex-row sm:gap-0">
+          <h2 class="pr-3 text-slate-950 sm:border-r">Cashflow</h2>
+
+          <nav class="flex justify-between">
+            <a class="p-0 text-sky-500 hover:text-slate-600 sm:px-3" href="#"
+              >Last 7 days</a
+            >
+            <a class="p-0 hover:text-sky-500 sm:px-3" href="#">Last 30 days</a>
+            <a class="p-0 hover:text-sky-500 sm:px-3" href="#">All-time</a>
+          </nav>
+        </div>
 
         <button
           class="rounded-lg bg-sky-500 px-4 py-2 text-white hover:bg-sky-600 active:bg-sky-700"
@@ -67,7 +76,9 @@
         </button>
       </section>
 
-      <section class="mb-12 grid grid-cols-4 divide-x border-b">
+      <section
+        class="mb-12 grid grid-cols-1 divide-y border-b sm:grid-cols-2 sm:divide-x lg:grid-cols-4 lg:divide-y-0"
+      >
         <div class="px-12 py-8">
           <div
             class="mb-2 flex justify-between text-sm font-bold text-slate-400"
@@ -110,17 +121,21 @@
       </section>
 
       <section class="">
-        <h2 class="border-b border-slate-100 px-12 py-8 font-bold">
+        <h2 class="border-b border-slate-100 px-10 py-8 font-bold sm:px-12">
           Recent activities
         </h2>
         <ul>
           <li>
-            <h3 class="border-b bg-slate-50 px-12 py-2 font-bold">Today</h3>
-            <ul class="px-12">
+            <h3 class="border-b bg-slate-50 px-10 py-2 font-bold sm:px-12">
+              Today
+            </h3>
+            <ul class="px-6 text-sm sm:px-12 sm:text-base">
               <li
-                class="grid grid-cols-[50px_repeat(3,_1fr)] border-b border-slate-100 py-4"
+                class="grid grid-cols-2 border-b border-slate-100 py-4 sm:grid-cols-[50px_repeat(3,_1fr)]"
               >
-                <i class="fa-regular fa-circle-up pt-2"></i>
+                <i
+                  class="fa-regular fa-circle-up hidden pt-2 sm:inline-block"
+                ></i>
 
                 <div class="">
                   <div class="mb-2 flex items-center gap-4">
@@ -135,7 +150,7 @@
                   <p class="text-sm text-slate-400">$500.00 tax</p>
                 </div>
 
-                <div class="">
+                <div class="hidden sm:block">
                   <h4 class="mb-2 font-bold">Reform</h4>
                   <p class="text-sm text-slate-400">Website Redesign</p>
                 </div>
@@ -150,9 +165,11 @@
               </li>
 
               <li
-                class="grid grid-cols-[50px_repeat(3,_1fr)] border-b border-slate-100 py-4"
+                class="grid grid-cols-2 border-b border-slate-100 py-4 sm:grid-cols-[50px_repeat(3,_1fr)]"
               >
-                <i class="fa-regular fa-circle-up pt-2"></i>
+                <i
+                  class="fa-regular fa-circle-up hidden pt-2 sm:inline-block"
+                ></i>
 
                 <div class="">
                   <div class="mb-2 flex items-center gap-4">
@@ -167,7 +184,7 @@
                   <p class="text-sm text-slate-400">$500.00 tax</p>
                 </div>
 
-                <div class="">
+                <div class="hidden sm:block">
                   <h4 class="mb-2 font-bold">Reform</h4>
                   <p class="text-sm text-slate-400">Website Redesign</p>
                 </div>
@@ -182,9 +199,11 @@
               </li>
 
               <li
-                class="grid grid-cols-[50px_repeat(3,_1fr)] border-b border-slate-100 py-4"
+                class="grid grid-cols-2 border-b border-slate-100 py-4 sm:grid-cols-[50px_repeat(3,_1fr)]"
               >
-                <i class="fa-regular fa-circle-up pt-2"></i>
+                <i
+                  class="fa-regular fa-circle-up hidden pt-2 sm:inline-block"
+                ></i>
 
                 <div class="">
                   <div class="mb-2 flex items-center gap-4">
@@ -199,7 +218,7 @@
                   <p class="text-sm text-slate-400">$500.00 tax</p>
                 </div>
 
-                <div class="">
+                <div class="hidden sm:block">
                   <h4 class="mb-2 font-bold">Reform</h4>
                   <p class="text-sm text-slate-400">Website Redesign</p>
                 </div>
@@ -216,12 +235,16 @@
           </li>
 
           <li>
-            <h3 class="border-b bg-slate-50 px-12 py-2 font-bold">Yesterday</h3>
-            <ul class="px-12">
+            <h3 class="border-b bg-slate-50 px-10 py-2 font-bold sm:px-12">
+              Yesterday
+            </h3>
+            <ul class="px-6 text-sm sm:px-12 sm:text-base">
               <li
-                class="grid grid-cols-[50px_repeat(3,_1fr)] border-b border-slate-100 py-4"
+                class="grid grid-cols-2 border-b border-slate-100 py-4 sm:grid-cols-[50px_repeat(3,_1fr)]"
               >
-                <i class="fa-regular fa-circle-up pt-2"></i>
+                <i
+                  class="fa-regular fa-circle-up hidden pt-2 sm:inline-block"
+                ></i>
 
                 <div class="">
                   <div class="mb-2 flex items-center gap-4">
@@ -236,7 +259,7 @@
                   <p class="text-sm text-slate-400">$500.00 tax</p>
                 </div>
 
-                <div class="">
+                <div class="hidden sm:block">
                   <h4 class="mb-2 font-bold">Reform</h4>
                   <p class="text-sm text-slate-400">Website Redesign</p>
                 </div>
@@ -251,9 +274,11 @@
               </li>
 
               <li
-                class="grid grid-cols-[50px_repeat(3,_1fr)] border-b border-slate-100 py-4"
+                class="grid grid-cols-2 border-b border-slate-100 py-4 sm:grid-cols-[50px_repeat(3,_1fr)]"
               >
-                <i class="fa-regular fa-circle-up pt-2"></i>
+                <i
+                  class="fa-regular fa-circle-up hidden pt-2 sm:inline-block"
+                ></i>
 
                 <div class="">
                   <div class="mb-2 flex items-center gap-4">
@@ -268,7 +293,7 @@
                   <p class="text-sm text-slate-400">$500.00 tax</p>
                 </div>
 
-                <div class="">
+                <div class="hidden sm:block">
                   <h4 class="mb-2 font-bold">Reform</h4>
                   <p class="text-sm text-slate-400">Website Redesign</p>
                 </div>
@@ -283,9 +308,11 @@
               </li>
 
               <li
-                class="grid grid-cols-[50px_repeat(3,_1fr)] border-b border-slate-100 py-4"
+                class="grid grid-cols-2 border-b border-slate-100 py-4 sm:grid-cols-[50px_repeat(3,_1fr)]"
               >
-                <i class="fa-regular fa-circle-up pt-2"></i>
+                <i
+                  class="fa-regular fa-circle-up hidden pt-2 sm:inline-block"
+                ></i>
 
                 <div class="">
                   <div class="mb-2 flex items-center gap-4">
@@ -300,7 +327,7 @@
                   <p class="text-sm text-slate-400">$500.00 tax</p>
                 </div>
 
-                <div class="">
+                <div class="hidden sm:block">
                   <h4 class="mb-2 font-bold">Reform</h4>
                   <p class="text-sm text-slate-400">Website Redesign</p>
                 </div>
